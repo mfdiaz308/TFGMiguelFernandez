@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TFG Miguel Fernández Díaz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        
+        .navbar img {
+            width: 100px;
+            height: auto;
+        }
+        
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .search-form {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 8px;
+        }
+        
+        input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-right: 5px;
+            width: 300px;
+        }
+        
+        input[type="submit"] {
+            padding: 8px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        
+        .result-title {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 20px;
+        }
+        
+        .result-container {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 20px;
+        }
+        
+        .result-item {
+            flex: 1;
+            text-align: center;
+            border: 1px solid #333;
+            padding: 10px;
+            border-radius: 3px;
+        }
+    </style>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var searchForm = document.querySelector('.search-form');
+            var searchInput = document.getElementById('search');
+            var resultItems = document.querySelectorAll('.result-item p');
+            
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                var inputValue = searchInput.value.trim();
+                
+                resultItems.forEach(function(item, index) {
+                    if (index === 0) {
+                        item.textContent = inputValue;
+                    } else if (index === 1) {
+                        item.textContent = inputValue.toUpperCase();
+                    } else if (index === 2) {
+                        item.textContent = '¡' + inputValue + '!';
+                    }
+                });
+                
+                searchInput.value = ''; // Limpiar el contenido del input de búsqueda
+            });
+        });
+    </script>
+    
+    
+</head>
+<body>
+    
+    <div class="navbar">
+        <img src="https://ai4labour.com/wp-content/uploads/2021/11/AI4labour-Logo_page-0001-scaled-300x187.jpg">
+        <p>Sistema de Recomendación de Cursos</p>
+    </div>
+    
+    <div class="search-container">
+        <form class="search-form" action="/search" method="post">
+            <input type="text" id="search" name="search" placeholder="Introduce una habilidad (c++, java, etc.)">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    
+    <div class="result-title">
+        <div class="result-title">
+            <h2>Enlace a json</h2>
+        </div>
+        <div class="result-title">
+            <h2>Nombre y plataforma</h2>
+        </div>
+        <div class="result-title">
+            <h2>Bloom</h2>
+        </div>
+    </div>
+    
+    <div class="result-container">
+        <div class="result-item">
+            <p>Icono de enlace</p>
+        </div>
+        <div class="result-item">
+            <p>Nombre curso y plataforma de la que viene</p>
+        </div>
+        <div class="result-item">
+            <p>Diagrama Bloom con las competencias correspondientes. Si esto fuese una sola linea probablemente ocupase casi toda la pagina.</p>
+        </div>
+    </div>
+    
+</body>
+</html>
