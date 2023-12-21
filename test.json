@@ -1,0 +1,35 @@
+[
+    {
+        "url": "https://www.coursera.org/learn/-security-principles",
+        "name": "Security Principles | Coursera",
+        "topics": [],
+        "skills": [],
+        "description": "Welcome to course 1 of 5 of this Specialization, Security Principles.After completing this course, the participant will be able to:\u00e2\u0080\u00af\n\nDiscuss the foundational concepts of cybersecurity principles.\n\n- Recognize foundational security concepts of information assurance.\n- Define risk management terminology and summarize the process.\n- Relate risk management to personal or professional practices.\n- Classify types of security controls.\n- Distinguish between policies, procedures, standards, regulations and laws.\n- Demonstrate the relationship among governance elements.\n- Analyze appropriate outcomes according to the canons of the (ISC)2 Code of Ethics when given examples.\n- Practice the terminology and review security principles.\n\nAgenda\n\nCourse Introduction\nModule 1: Information Assurance \nModule 2: Risk Management Process \nModule 3: Security Controls\nModule 4: Governance\nModule 5: (ISC)2 Code of Ethics\nModule 6: Course Summary\n\nThis training is for IT professionals, career changers, college students, recent college graduates, advanced high school students and recent high school graduates looking to start their path toward cybersecurity leadership by taking the Certified in Cybersecurity entry-level exam.\n\nThere are no prerequisites to take the training or the exam. It is recommended that candidates have basic Information Technology (IT) knowledge. No work experience in cybersecurity or formal education diploma/degree is required.",
+        "language": "UNK",
+        "outcomes": []
+    },
+    {
+        "url": "https://www.coursera.org/learn/-network-security",
+        "name": "Network Security | Coursera",
+        "topics": [],
+        "skills": [],
+        "description": "Welcome to course 4 of 5 of this Specialization, Network Security.In this course, we will look at computer networking and securing the network. In today\u00e2\u0080\u0099s world, the internet connects nearly everyone and everything, and this is accomplished through networking. While most see computer networking as a positive, criminals routinely use the internet, and the networking protocols themselves, as weapons and tools to exploit vulnerabilities and for this reason we must do our best to secure the network. We will review the basic components of a network, threats and attacks to the network, and learn how to protect them from attackers. Network security itself can be a specialty career within cybersecurity; however, all information security professionals need to understand how networks operate and are exploited to better secure them. \n\nAfter completing this chapter, the participant will be able to:\u00e2\u0080\u00af\n\nExplain the concepts of network security. \n\n- Recognize common networking terms and models. \n- Identify common protocols and ports and their secure counterparts. \n- Identify types of network (cyber) threats and attacks. \n- Discuss common tools used to identify and prevent threats. \n- Identify common data center terminology. \n- Recognize common cloud service terminology. \n- Identify secure network design terminology. \n- Practice the terminology of and review network security concepts. \n\nAgenda\n\nCourse Introduction\nModule 1: Network Concepts and Models \nModule 2: Common Network Threats and Attacks\nModule 3: Network Security Infrastructure\nModule 4: Network Security Review\n\nThis training is for IT professionals, career changers, college students, recent college graduates, advanced high school students and recent high school graduates looking to start their path toward cybersecurity leadership by taking the Certified in Cybersecurity entry-level exam.\n\nThere are no prerequisites to take the training or the exam. It is recommended that candidates have basic Information Technology (IT) knowledge. No work experience in cybersecurity or formal education diploma/degree is required.",
+        "language": "UNK",
+        "outcomes": []
+    },
+    {
+        "url": "https://www.udemy.com/course/accent-reduction/",
+        "name": "Accent Reduction Made Fast and Easy | Udemy",
+        "topics": [],
+        "skills": [
+            "By the end of this course, you will be able to speak American English in a much clearer and confident way because you have a much better American English pronunciation.",
+            "You shouldn't have to worry about how you are speaking but be able to concentrate on what you are saying. "
+        ],
+        "type": "courses",
+        "description": "This course is about how to learn to say difficult sounds in English quickly and to reduce your accent audibly. We will cover the most important phonics/sounds that my clients - from India, China, France, Russia, Brazil, Spain and so on - have the most problems with doing business in the US/Silicon Valley. You don't have to go through all the lectures, just pick the areas you feel you still have to work on and practice the words diligently. You will see the slides that go with the video and most of the time, I also uploaded additional practice materials. If you work on your English pronunciation consistently, you will see\u00a0results\u00a0really fast.\u00a0Who this course is for:You need to know some spoken American English already to benefit from the course. But, since this is an American English speaking course with lots of examples, if you practice a lot, you will be successful and will master American English. Show moreShow less",
+        "language": "English",
+        "outcomes": [
+            "This course is about how to learn to say difficult sounds in English quickly and to reduce your accent audibly. We will cover the most important phonics/sounds that my clients - from India, China, France, Russia, Brazil, Spain and so on - have the most problems with doing business in the US/Silicon Valley. You don't have to go through all the lectures, just pick the areas you feel you still have to work on and practice the words diligently. You will see the slides that go with the video and most of the time, I also uploaded additional practice materials. If you work on your English pronunciation consistently, you will see\u00a0results\u00a0really fast.\u00a0"
+        ]
+    }
+]

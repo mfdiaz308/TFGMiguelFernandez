@@ -76,34 +76,7 @@
             padding: 10px;
             border-radius: 3px;
         }
-    </style>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var searchForm = document.querySelector('.search-form');
-            var searchInput = document.getElementById('search');
-            var resultItems = document.querySelectorAll('.result-item p');
-            
-            searchForm.addEventListener('submit', function(event) {
-                event.preventDefault();
-                
-                var inputValue = searchInput.value.trim();
-                
-                resultItems.forEach(function(item, index) {
-                    if (index === 0) {
-                        item.textContent = inputValue;
-                    } else if (index === 1) {
-                        item.textContent = inputValue.toUpperCase();
-                    } else if (index === 2) {
-                        item.textContent = '¡' + inputValue + '!';
-                    }
-                });
-                
-                searchInput.value = ''; // Limpiar el contenido del input de búsqueda
-            });
-        });
-    </script>
-    
+    </style>    
     
 </head>
 <body>
@@ -122,7 +95,7 @@
     
     <div class="result-title">
         <div class="result-title">
-            <h2>Enlace a json</h2>
+            <h2>Enlace a curso</h2>
         </div>
         <div class="result-title">
             <h2>Nombre y plataforma</h2>
@@ -134,10 +107,12 @@
     
     <div class="result-container">
         <div class="result-item">
-            <p>Icono de enlace</p>
+            <a href={{course_url}}>
+                <img src="https://media.istockphoto.com/id/1135273220/vector/link-icon-hyperlink-chain-symbol-external-link-symbol-vector-icon-download-share-and-load.jpg?s=612x612&w=0&k=20&c=RamInH2oNHWH_H0ESESgVdJ4GPXkFuffI-xgCZHj7R8=" alt="Link" width="50" height="50">
+            </a>
         </div>
         <div class="result-item">
-            <p>Nombre curso y plataforma de la que viene</p>
+            <p>{{course_name}}</p>
         </div>
         <div class="result-item">
             <p>Diagrama Bloom con las competencias correspondientes. Si esto fuese una sola linea probablemente ocupase casi toda la pagina.</p>
