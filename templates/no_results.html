@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TFG Miguel Fernández Díaz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        
+        .navbar img {
+            width: 100px;
+            height: auto;
+        }
+        
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .search-form {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 8px;
+        }
+        
+        input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-right: 5px;
+            width: 300px;
+        }
+        
+        input[type="submit"] {
+            padding: 8px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .message-box {
+            text-align: center;
+        }
+        .message-box img {
+            width: 100px;
+            height: auto;
+        }
+
+    </style>
+    
+</head>
+<body>
+    
+    <div class="navbar">
+        <img src="https://ai4labour.com/wp-content/uploads/2021/11/AI4labour-Logo_page-0001-scaled-300x187.jpg">
+        <h1>Sistema de Recomendación de Cursos</h1>
+    </div>
+    
+    <div class="search-container">
+        <form class="search-form" action="/search" method="post">
+            <input type="text" id="search" name="search" placeholder="Introduce una habilidad (c++, java, etc.)">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    <div class="message-box">
+        <h2>No se han encontrado resultados</h2>
+        <img src="https://cdn-icons-png.flaticon.com/512/6134/6134116.png">
+    </div>
+    
+</body>
+</html>

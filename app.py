@@ -43,9 +43,9 @@ def count_bloom_verbs(course_description):
 
 def get_course(query):
     # For main folder with web_page and course_crawler inside
-    # with open('course_crawler/all.json','r') as f:
+    with open('course_crawler/all.json','r') as f:
     # For testing json
-    with open('test.json','r') as f:
+    # with open('test.json','r') as f:
         data = json.load(f)
 
     for course in data:
@@ -63,7 +63,11 @@ def search():
     if request.method == 'POST':
         search_query = request.form['search']
         print("Search query:", search_query)
-        course = get_course(search_query)
+        course=''
+        try:
+            course = get_course(search_query)
+        except:
+            return render_template('no_results.html')
 
         bloom_count = count_bloom_verbs(course['description'])
 
