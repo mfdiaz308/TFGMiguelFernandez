@@ -57,13 +57,6 @@
             background-color: #0056b3;
         }
         
-        .result-title {
-            display: flex;
-            justify-content: space-evenly;
-            gap: 70px;
-            margin-top: 20px;
-        }
-        
         .result-container {
             display: flex;
             justify-content: space-evenly;
@@ -71,14 +64,9 @@
         }
         
         .result-item {
-            flex: 1;
-            text-align: center;
             border: 1px solid #333;
-            padding: 10px;
-            border-radius: 3px;
+            border-collapse: collapse;
         }
-        
-        
         
         body, table, input, select, textarea {
             
@@ -179,7 +167,7 @@
                     text-align:center;
                     white-space:nowrap;
                     text-indent:0;
-                    transform:rotate(-45deg);
+                    transform:rotate(-60deg);
                 }
                 
                 .graph tbody th:after {
@@ -226,40 +214,6 @@
     
 </head>
 
-<!-- <script>
-    function generateContainers() {
-        const resultTable = document.getElementById("result-container");
-        
-        // Recorre los datos y genera un contenedor por cada elemento
-        data.forEach(item => {
-            const resultContainer = document.createElement("div");
-            resultContainer.classList.add("result-container");
-            
-            resultContainer.innerHTML = `
-            <div class="result-item">
-                <a href="${item.course_url}">
-                    <img src="https://media.istockphoto.com/id/1135273220/vector/link-icon-hyperlink-chain-symbol-external-link-symbol-vector-icon-download-share-and-load.jpg?s=612x612&w=0&k=20&c=RamInH2oNHWH_H0ESESgVdJ4GPXkFuffI-xgCZHj7R8=" alt="Link" width="50" height="50">
-                </a>
-            </div>
-            <div class="result-item">
-                <p>${item.course_name}</p>
-            </div>
-            <div class="result-item">
-                <p>${item.course_description}</p>
-            </div>
-            <div class="result-item">
-                <p>Diagrama Bloom con las competencias correspondientes. Si esto fuese una sola línea probablemente ocupase casi toda la página.</p>
-            </div>
-            `;
-            
-            resultTable.appendChild(resultContainer);
-        });
-    }
-    
-    // Llama a la función para generar los contenedores al cargar la página
-    window.onload = generateContainers();
-</script> -->
-
 <body>
     
     <div class="navbar">
@@ -273,23 +227,61 @@
             <input type="submit" value="Search">
         </form>
     </div>
+
+    <table class="result-container" style="border-collapse: collapse;">
+        <tr>
+            <th>Enlace</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Bloom</th>
+        </tr>
+        <tr>
+            <td class="result-item">
+                <a href={{course_url}}>
+                    <img src="https://media.istockphoto.com/id/1135273220/vector/link-icon-hyperlink-chain-symbol-external-link-symbol-vector-icon-download-share-and-load.jpg?s=612x612&w=0&k=20&c=RamInH2oNHWH_H0ESESgVdJ4GPXkFuffI-xgCZHj7R8=" alt="Link" width="50" height="50">
+                </a>
+            </td>
+            <td class="result-item">{{course_name}}</td>
+            <td class="result-item">{{course_description}}</td>
+            <td class="result-item">
+                <table class="graph">
+                    <thead>
+                        <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Percent</th>
+                        </tr>
+                    </thead><tbody>
+                        <tr style="height:{{remember_num}}%">
+                            <th scope="row">Remember</th>
+                            <td><span>{{remember_num}}%</span></td>
+                        </tr>
+                        <tr style="height:{{understand_num}}%">
+                            <th scope="row">Understand</th>
+                            <td><span>{{understand_num}}%</span></td>
+                        </tr>
+                        <tr style="height:{{apply_num}}%">
+                            <th scope="row">Analyze</th>
+                            <td><span>{{apply_num}}%</span></td>
+                        </tr>
+                        <tr style="height:{{analyze_num}}%">
+                            <th scope="row">Apply</th>
+                            <td><span>{{analyze_num}}%</span></td>
+                        </tr>
+                        <tr style="height:{{evaluate_num}}%">
+                            <th scope="row">Evaluate</th>
+                            <td><span>{{evaluate_num}}%</span></td>
+                        </tr>
+                        <tr style="height:{{create_num}}%">
+                            <th scope="row">Create</th>
+                            <td><span>{{create_num}}%</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
     
-    <div class="result-title">
-        <div class="result-title">
-            <h2>Enlace</h2>
-        </div>
-        <div class="result-title">
-            <h2>Nombre</h2>
-        </div>
-        <div class="result-title">
-            <h2>Descripción</h2>
-        </div>
-        <div class="result-title">
-            <h2>Bloom</h2>
-        </div>
-    </div>
-    
-    <div class="result-container">
+    <!-- <div class="result-container">
         <div class="result-item">
             <a href={{course_url}}>
                 <img src="https://media.istockphoto.com/id/1135273220/vector/link-icon-hyperlink-chain-symbol-external-link-symbol-vector-icon-download-share-and-load.jpg?s=612x612&w=0&k=20&c=RamInH2oNHWH_H0ESESgVdJ4GPXkFuffI-xgCZHj7R8=" alt="Link" width="50" height="50">
@@ -301,9 +293,7 @@
         <div class="result-item">
             <p>{{course_description}}</p>
         </div>
-        <div class="result-item">
-            <!-- <p>Diagrama Bloom con las competencias correspondientes. Si esto fuese una sola linea probablemente ocupase casi toda la pagina.</p> -->
-            
+        <div class="result-item-graph">
             <table class="graph">
                 <thead>
                     <tr>
@@ -339,7 +329,7 @@
             </table>
             
         </div>
-    </div>
+    </div> -->
 </div>
 
 </body>
