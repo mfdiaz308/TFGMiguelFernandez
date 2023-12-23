@@ -60,6 +60,7 @@
         .result-title {
             display: flex;
             justify-content: space-evenly;
+            gap: 70px;
             margin-top: 20px;
         }
         
@@ -76,9 +77,189 @@
             padding: 10px;
             border-radius: 3px;
         }
+        
+        
+        
+        body, table, input, select, textarea {
+            
+        }
+        
+        
+        .graph {
+            margin-bottom:1em;
+            font:normal 100%/150% arial,helvetica,sans-serif;
+        }
+        
+        .graph caption {
+            font:bold 150%/120% arial,helvetica,sans-serif;
+            padding-bottom:0.33em;
+        }
+        
+        .graph tbody th {
+            text-align:right;
+        }
+        
+        @supports (display:grid) {
+            
+            @media (min-width:32em) {
+                
+                .graph {
+                    display:block;
+                    width:350px;
+                    height:150px;
+                }
+                
+                .graph caption {
+                    display:block;
+                }
+                
+                .graph thead {
+                    display:none;
+                }
+                
+                .graph tbody {
+                    position:relative;
+                    display:grid;
+                    grid-template-columns:repeat(auto-fit, minmax(2em, 1fr));
+                    column-gap:2.5%;
+                    align-items:end;
+                    height:100%;
+                    margin:3em 0 1em 2.8em;
+                    padding:0 1em;
+                    border-bottom:2px solid rgba(0,0,0,0.5);
+                    background:repeating-linear-gradient(
+                    180deg,
+                    rgba(170,170,170,0.7) 0,
+                    rgba(170,170,170,0.7) 1px,
+                    transparent 1px,
+                    transparent 20%
+                    );
+                }
+                
+                .graph tbody:before,
+                .graph tbody:after {
+                    position:absolute;
+                    left:-3.2em;
+                    width:2.8em;
+                    text-align:right;
+                    font:bold 80%/120% arial,helvetica,sans-serif;
+                }
+                
+                .graph tbody:before {
+                    content:"100%";
+                    top:-0.6em;
+                }
+                
+                .graph tbody:after {
+                    content:"0%";
+                    bottom:-0.6em;
+                }
+                
+                .graph tr {
+                    position:relative;
+                    display:block;
+                }
+                
+                .graph tr:hover {
+                    z-index:999;
+                }
+                
+                .graph th,
+                .graph td {
+                    display:block;
+                    text-align:center;
+                }
+                
+                .graph tbody th {
+                    position:absolute;
+                    top:-3em;
+                    left:0;
+                    width:100%;
+                    font-weight:normal;
+                    text-align:center;
+                    white-space:nowrap;
+                    text-indent:0;
+                    transform:rotate(-45deg);
+                }
+                
+                .graph tbody th:after {
+                    content:"";
+                }
+                
+                .graph td {
+                    width:100%;
+                    height:100%;
+                    background:rgb(23, 217, 1);
+                    border-radius:0.5em 0.5em 0 0;
+                    transition:background 0.5s;
+                }
+                
+                .graph tr:hover td {
+                    opacity:0.7;
+                }
+                
+                .graph td span {
+                    overflow:hidden;
+                    position:absolute;
+                    left:50%;
+                    top:50%;
+                    width:0;
+                    padding:0.5em 0;
+                    margin:-1em 0 0;
+                    font:normal 85%/120% arial,helvetica,sans-serif;
+                    font-weight:bold;
+                    opacity:0;
+                    transition:opacity 0.5s;
+                    color:white;
+                }
+                
+                .toggleGraph:checked + table td span,
+                .graph tr:hover td span {
+                    width:4em;
+                    margin-left:-2em;
+                    opacity:1;
+                }
+            }
+            
+        }
     </style>    
     
 </head>
+
+<!-- <script>
+    function generateContainers() {
+        const resultTable = document.getElementById("result-container");
+        
+        // Recorre los datos y genera un contenedor por cada elemento
+        data.forEach(item => {
+            const resultContainer = document.createElement("div");
+            resultContainer.classList.add("result-container");
+            
+            resultContainer.innerHTML = `
+            <div class="result-item">
+                <a href="${item.course_url}">
+                    <img src="https://media.istockphoto.com/id/1135273220/vector/link-icon-hyperlink-chain-symbol-external-link-symbol-vector-icon-download-share-and-load.jpg?s=612x612&w=0&k=20&c=RamInH2oNHWH_H0ESESgVdJ4GPXkFuffI-xgCZHj7R8=" alt="Link" width="50" height="50">
+                </a>
+            </div>
+            <div class="result-item">
+                <p>${item.course_name}</p>
+            </div>
+            <div class="result-item">
+                <p>${item.course_description}</p>
+            </div>
+            <div class="result-item">
+                <p>Diagrama Bloom con las competencias correspondientes. Si esto fuese una sola línea probablemente ocupase casi toda la página.</p>
+            </div>
+            `;
+            
+            resultTable.appendChild(resultContainer);
+        });
+    }
+    
+    // Llama a la función para generar los contenedores al cargar la página
+    window.onload = generateContainers();
+</script> -->
+
 <body>
     
     <div class="navbar">
@@ -95,10 +276,13 @@
     
     <div class="result-title">
         <div class="result-title">
-            <h2>Enlace a curso</h2>
+            <h2>Enlace</h2>
         </div>
         <div class="result-title">
-            <h2>Nombre y plataforma</h2>
+            <h2>Nombre</h2>
+        </div>
+        <div class="result-title">
+            <h2>Descripción</h2>
         </div>
         <div class="result-title">
             <h2>Bloom</h2>
@@ -115,9 +299,48 @@
             <p>{{course_name}}</p>
         </div>
         <div class="result-item">
-            <p>Diagrama Bloom con las competencias correspondientes. Si esto fuese una sola linea probablemente ocupase casi toda la pagina.</p>
+            <p>{{course_description}}</p>
+        </div>
+        <div class="result-item">
+            <!-- <p>Diagrama Bloom con las competencias correspondientes. Si esto fuese una sola linea probablemente ocupase casi toda la pagina.</p> -->
+            
+            <table class="graph">
+                <thead>
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Percent</th>
+                    </tr>
+                </thead><tbody>
+                    <tr style="height:{{remember_num}}%">
+                        <th scope="row">Remember</th>
+                        <td><span>{{remember_num}}%</span></td>
+                    </tr>
+                    <tr style="height:{{understand_num}}%">
+                        <th scope="row">Understand</th>
+                        <td><span>{{understand_num}}%</span></td>
+                    </tr>
+                    <tr style="height:{{apply_num}}%">
+                        <th scope="row">Analyze</th>
+                        <td><span>{{apply_num}}%</span></td>
+                    </tr>
+                    <tr style="height:{{analyze_num}}%">
+                        <th scope="row">Apply</th>
+                        <td><span>{{analyze_num}}%</span></td>
+                    </tr>
+                    <tr style="height:{{evaluate_num}}%">
+                        <th scope="row">Evaluate</th>
+                        <td><span>{{evaluate_num}}%</span></td>
+                    </tr>
+                    <tr style="height:{{create_num}}%">
+                        <th scope="row">Create</th>
+                        <td><span>{{create_num}}%</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            
         </div>
     </div>
-    
+</div>
+
 </body>
 </html>
