@@ -1,6 +1,5 @@
 import json
 from flask import Flask, render_template, request
-import os
 
 app = Flask(__name__)
 
@@ -42,17 +41,20 @@ def count_bloom_verbs(course_description):
     return res
 
 def get_course(query):
+    res = []
     # For main folder with web_page and course_crawler inside
-    with open('course_crawler/all.json','r') as f:
-    # For testing json
-    # with open('test.json','r') as f:
+    with open('web_page/course_crawler_data/all.json','r') as f:
         data = json.load(f)
 
-    for course in data:
-        if query.lower() in course['name'].lower() or query.lower() in course['skills'] or query.lower() in course['description']:
-            return course
+    try:
+        for course in data:
+            if query.lower() in course['name'].lower() or query.lower() in course['skills'] or query.lower() in course['description']:
+                res.append(course)            
+    except Exception as e:
+        print('----------------------------')
     
-    return None
+    print(len(res))
+    return res
 
 @app.route('/')
 def index():
@@ -62,27 +64,32 @@ def index():
 def search():
     if request.method == 'POST':
         search_query = request.form['search']
+        search_query += ' '
         print("Search query:", search_query)
-        course=''
-        try:
-            course = get_course(search_query)
-        except:
+        courses=get_course(search_query)
+        if courses == []:
+            # Redirects to no_results page
             return render_template('no_results.html')
+        
+        i=0
+        
+        bloom_count = count_bloom_verbs(courses[i]['description'])
 
-        bloom_count = count_bloom_verbs(course['description'])
+        # bloom_arr = []
+        # for course in courses:
+        #     bloom_count = count_bloom_verbs(course['description'])
+        #     bloom_arr.append(bloom_count)
 
-        course_description = course['description'].split('.')[0]
-        if course['description'] == '':
+        # If no description, no Bloom diagram
+        course_description = courses[i]["description"].split(".")[0]
+        if courses[i]['description'] == '':
             course_description = 'No description available.'
 
-        # Redirects back to the home page for now
-        return render_template('results.html', course_url = course['url'], course_name = course['name'], course_description = course_description,
+        # Redirects to results page
+        return render_template('results.html', course_url = courses[i]['url'], course_name = courses[i]['name'], course_description_short = f'{course_description}...', course_description = courses[i]['description'],
                                remember_num = bloom_count[0], understand_num = bloom_count[1], apply_num = bloom_count[2], analyze_num = bloom_count[3], evaluate_num = bloom_count[4], create_num = bloom_count[5])
     # If it's a GET request or other method, redirect to the home page
     return render_template('index.html', search_input = '')
-
-#TODO: setup apache server
-#TODO: when no course found
 
 if __name__ == '__main__':
     app.run(debug=True)

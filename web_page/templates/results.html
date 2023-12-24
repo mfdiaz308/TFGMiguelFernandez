@@ -210,8 +210,50 @@
             }
             
         }
+
+        .description-box {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.7);
+        }
+        .description-box-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #333;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover, .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>    
 </head>
+
+<script>
+    function open_description() {
+        var description = document.getElementById('description-box');
+        description.style.display = 'block';
+    }
+
+    function close_description() {
+        var description = document.getElementById('description-box');
+        description.style.display = 'none';
+    }
+</script>
 
 <body>
     
@@ -222,17 +264,25 @@
     
     <div class="search-container">
         <form class="search-form" action="/search" method="post">
-            <input type="text" id="search" name="search" placeholder="Introduce una habilidad (c++, java, etc.)">
+            <input type="text" id="search" name="search" placeholder="Introduce una habilidad (biología, java, etc.)">
             <input type="submit" value="Search">
         </form>
+    </div>
+
+
+    <div id="description-box" class="description-box">
+        <div class="description-box-content">
+        <span class="close" onclick="close_description()">&times;</span>
+        <p id="full-description">"{{course_description}}"</p>
+        </div>
     </div>
     
     <table class="result-container" style="border-collapse: collapse; font-size: 14px;">
         <tr>
             <th>Enlace</th>
-            <th>Nombre</th>
+            <th>Nombre y Plataforma</th>
             <th>Descripción</th>
-            <th>Bloom</th>
+            <th>Taxonomía Bloom</th>
         </tr>
         <tr>
             <td class="result-item">
@@ -241,7 +291,11 @@
                 </a>
             </td>
             <td class="result-item">{{course_name}}</td>
-            <td class="result-item">{{course_description}}</td>
+            <td class="result-item">
+                <p>{{course_description_short}}</p>
+                <button id="ver_mas_button" onclick="open_description()">Ver más</button>
+            </td>
+
             <td class="result-item">
                 <table class="graph">
                     <thead>
