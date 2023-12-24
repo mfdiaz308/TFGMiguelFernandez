@@ -75,11 +75,11 @@
         
         .graph {
             margin-bottom:1em;
-            font:normal 100%/150% arial,helvetica,sans-serif;
+            font:normal 100%/150% arial,sans-serif;
         }
         
         .graph caption {
-            font:bold 150%/120% arial,helvetica,sans-serif;
+            font:bold 150%/120% arial,sans-serif;
             padding-bottom:0.33em;
         }
         
@@ -130,7 +130,7 @@
                     left:-3.2em;
                     width:2.8em;
                     text-align:right;
-                    font:bold 80%/120% arial,helvetica,sans-serif;
+                    font:bold 80%/120% arial,sans-serif;
                 }
                 
                 .graph tbody:before {
@@ -177,7 +177,7 @@
                 .graph td {
                     width:100%;
                     height:100%;
-                    background:rgb(23, 217, 1);
+                    background:#007bff;
                     border-radius:0.5em 0.5em 0 0;
                     transition:background 0.5s;
                 }
@@ -194,7 +194,7 @@
                     width:0;
                     padding:0.5em 0;
                     margin:-1em 0 0;
-                    font:normal 85%/120% arial,helvetica,sans-serif;
+                    font:normal 85%/120% arial,sans-serif;
                     font-weight:bold;
                     opacity:0;
                     transition:opacity 0.5s;
@@ -211,7 +211,6 @@
             
         }
     </style>    
-    
 </head>
 
 <body>
@@ -227,7 +226,7 @@
             <input type="submit" value="Search">
         </form>
     </div>
-
+    
     <table class="result-container" style="border-collapse: collapse; font-size: 14px;">
         <tr>
             <th>Enlace</th>
@@ -280,56 +279,6 @@
             </td>
         </tr>
     </table>
-    
-    <!-- <div class="result-container">
-        <div class="result-item">
-            <a href={{course_url}}>
-                <img src="https://media.istockphoto.com/id/1135273220/vector/link-icon-hyperlink-chain-symbol-external-link-symbol-vector-icon-download-share-and-load.jpg?s=612x612&w=0&k=20&c=RamInH2oNHWH_H0ESESgVdJ4GPXkFuffI-xgCZHj7R8=" alt="Link" width="50" height="50">
-            </a>
-        </div>
-        <div class="result-item">
-            <p>{{course_name}}</p>
-        </div>
-        <div class="result-item">
-            <p>{{course_description}}</p>
-        </div>
-        <div class="result-item-graph">
-            <table class="graph">
-                <thead>
-                    <tr>
-                        <th scope="col">Item</th>
-                        <th scope="col">Percent</th>
-                    </tr>
-                </thead><tbody>
-                    <tr style="height:{{remember_num}}%">
-                        <th scope="row">Remember</th>
-                        <td><span>{{remember_num}}%</span></td>
-                    </tr>
-                    <tr style="height:{{understand_num}}%">
-                        <th scope="row">Understand</th>
-                        <td><span>{{understand_num}}%</span></td>
-                    </tr>
-                    <tr style="height:{{apply_num}}%">
-                        <th scope="row">Analyze</th>
-                        <td><span>{{apply_num}}%</span></td>
-                    </tr>
-                    <tr style="height:{{analyze_num}}%">
-                        <th scope="row">Apply</th>
-                        <td><span>{{analyze_num}}%</span></td>
-                    </tr>
-                    <tr style="height:{{evaluate_num}}%">
-                        <th scope="row">Evaluate</th>
-                        <td><span>{{evaluate_num}}%</span></td>
-                    </tr>
-                    <tr style="height:{{create_num}}%">
-                        <th scope="row">Create</th>
-                        <td><span>{{create_num}}%</span></td>
-                    </tr>
-                </tbody>
-            </table>
-            
-        </div>
-    </div> -->
 </div>
 
 </body>
