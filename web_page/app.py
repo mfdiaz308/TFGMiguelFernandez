@@ -71,14 +71,13 @@ def search():
             # Redirects to no_results page
             return render_template('no_results.html')
         
-        i=0
-        
-        bloom_count = count_bloom_verbs(courses[i]['description'])
+        #TODO: send to results.html the whole arr, not just arr[i]
+        i=20
 
-        # bloom_arr = []
-        # for course in courses:
-        #     bloom_count = count_bloom_verbs(course['description'])
-        #     bloom_arr.append(bloom_count)
+        bloom_arr = []
+        for course in courses:
+            bloom_count = count_bloom_verbs(course['description'])
+            bloom_arr.append(bloom_count)
 
         # If no description, no Bloom diagram
         course_description = courses[i]["description"].split(".")[0]
@@ -87,7 +86,7 @@ def search():
 
         # Redirects to results page
         return render_template('results.html', course_url = courses[i]['url'], course_name = courses[i]['name'], course_description_short = f'{course_description}...', course_description = courses[i]['description'],
-                               remember_num = bloom_count[0], understand_num = bloom_count[1], apply_num = bloom_count[2], analyze_num = bloom_count[3], evaluate_num = bloom_count[4], create_num = bloom_count[5])
+                               remember_num = bloom_arr[i][0], understand_num = bloom_arr[i][1], apply_num = bloom_arr[i][2], analyze_num = bloom_arr[i][3], evaluate_num = bloom_arr[i][4], create_num = bloom_arr[i][5])
     # If it's a GET request or other method, redirect to the home page
     return render_template('index.html', search_input = '')
 
