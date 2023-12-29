@@ -1,0 +1,309 @@
+[
+    {
+        "url": "https://www.coursera.org/projects/test-driven-development-in-java",
+        "name": "Test Driven Development in Java for Beginners ",
+        "topics": [
+            "Software Testing",
+            "Software Engineering",
+            "Java",
+            "Java Programming"
+        ],
+        "skills": [
+            "Understand the overall process of test-driven development in Java",
+            "Through coded examples be able to utilize your knowledge in TDD"
+        ],
+        "description": "By the end of this course, you will understand the test-driven development process in Java at a beginner's level.",
+        "language": "English",
+        "outcomes": ""
+    },
+    {
+        "url": "https://www.coursera.org/projects/predict-ideal-diamonds-with-a-random-forest-using-r",
+        "name": "Predict Ideal Diamonds over Good Diamonds using a Random Forest using R",
+        "topics": [
+            "Random Forest",
+            "Data Science",
+            "Data Analysis",
+            "Machine Learning"
+        ],
+        "skills": [
+            "Complete a random Training and Test Set from one Data Source using an R function.",
+            "Practice creating a Factor/Binary Variable on a data set.",
+            "Apply a Random Forest model and evaluate its results."
+        ],
+        "description": "In this 1-hour long project-based course, you will learn how to (complete a training and test set using an R function, practice looking at data distribution using R and ggplot2, Apply a Random Forest model to the data, and examine the results using RMSE and a Confusion Matrix). ",
+        "language": "English",
+        "outcomes": ""
+    },
+    {
+        "url": "https://www.coursera.org/projects/click-move-unity-navmesh",
+        "name": "Click-to-Move with Unity NavMesh",
+        "topics": [
+            "Unity",
+            "Application development",
+            "Unity 3D",
+            "C sharp (C#) Programming Language",
+            "Video-game Development"
+        ],
+        "skills": [
+            "Become familiar with path-finding in Unity using its NavMesh tool.",
+            "Become familiar with setting up NavMesh Agents and how to maneuver them in a Scene using Raycast.",
+            "Understand the difference in setting up static and dynamic obstacles when baking a NavMesh."
+        ],
+        "description": "In this one-hour, project-based course, you'll learn how to utilize the Navigation System to move a character to wherever the player clicks. We'll be setting up a \"NavMesh\" that defines where the character is able to walk. You will also learn how to set up static and dynamic obstacles that the Player will automatically avoid.",
+        "language": "English",
+        "outcomes": ""
+    },
+    {
+        "url": "https://www.coursera.org/projects/stopwatch-javascript",
+        "name": "Build a Stopwatch using JavaScript",
+        "topics": [
+            "website's dynamics",
+            "HTML",
+            "JavaScript",
+            "Cascading Style Sheets (CSS)",
+            "webdevelopment"
+        ],
+        "skills": [
+            "create a stopwatch from scratch ",
+            "learn how to add dynamics to a website",
+            "learn how to link between JavaScript, HTML and CSS"
+        ],
+        "description": "In this 1-hour long project-based course, you will learn how to (be able to apply the basics of JavaScript, some built-in methods and create your own variable, be able to create arrays, conditions of high level and define conditions with different forms, be able to create functions, deal with the built-in methods and with the scope levels, be able to link between JavaScript and HTML, be able to handle code cases and  add more options to  your own smart interactive stopwatch to save and update data, be able to link between JavaScript and CSS, complete your own smart interactive stopwatch, display saved data and create its layout). ",
+        "language": "English",
+        "outcomes": ""
+    },
+    {
+        "url": "https://www.coursera.org/projects/mining-quality-prediction",
+        "name": "Mining Quality Prediction Using Machine & Deep Learning",
+        "topics": [
+            "Artificial Intelligence (AI)",
+            "Python Programming",
+            "Machine Learning",
+            "Deep Learning",
+            "Regression Models"
+        ],
+        "skills": [
+            "Train Artificial Neural Network models to perform regression tasks\r",
+            "Understand the theory and intuition behind regression models and train them in Scikit Learn",
+            "Understand the difference between various regression models KPIs such as MSE, RMSE, MAE, R2, adjusted R2\r "
+        ],
+        "description": "In this 1.5-hour long project-based course, you will be able to:",
+        "language": "English",
+        "outcomes": ""
+    },
+    {
+        "url": "https://www.coursera.org/projects/graficando-funciones-trigonometricas-inversas-con-python",
+        "name": "Graficando funciones trigonometricas inversas con Python",
+        "topics": [
+            "Python Programming",
+            "Programacion de computadoras",
+            "Funciones trigonometricas inversas",
+            "Matematica",
+            "Interfaces interactivas"
+        ],
+        "skills": [
+            "Programaras interfaces interactivas para explorar graficas de funciones trigonometricas inversas en la escuela secundaria.",
+            "Utilizaras Python 3.9 en Jupyter Notebook con las bibliotecas numpy, matplotlib y ipywidgets."
+        ],
+        "description": "En la matematica escolar es importante abordar varias perspectivas y tecnicas para asimilar los conceptos matematicos, realizar procedimientos con entendimiento e interpretar los resultados. Por ejemplo, las funciones matematicas pueden ser estudiadas mediante expresiones algebraicas y trascendentes y representadas en listas, tablas y graficas.",
+        "language": "Spanish",
+        "outcomes": ""
+    },
+    {
+        "url": "https://www.coursera.org/projects/how-to-create-a-marketing-analytics-dashboard-using-hubspot",
+        "name": "How to create a marketing analytics dashboard using Hubspot",
+        "topics": [
+            "analysis",
+            "Marketing"
+        ],
+        "skills": [
+            "Create custom report dashboard in Hubspot",
+            "Add reports to dashboard in Hubspot",
+            "Edit and filter reports in dashboard in Hubspot"
+        ],
+        "description": "By the end of this project, you will learn how to create a customized report dashboard in Hubspot, will learn how to add existing marketing reports, adjust the view of the marketing dashboard. Your new skills will help you efficiently manage marketing and stay up to date on marketing reports in Hubspot.",
+        "language": "English",
+        "outcomes": ""
+    },
+    {
+        "url": "https://www.coursera.org/projects/working-with-subqueries-in-sql",
+        "name": "Working with Subqueries in SQL",
+        "topics": [
+            "Postgresql",
+            "SQL Operators",
+            "Database Querying",
+            "SQL Joins",
+            "Subqueries"
+        ],
+        "skills": [
+            "Use subqueries in the WHERE clause",
+            "Use subqueries in the FROM clause",
+            "Use subqueries in the SELECT clause"
+        ],
+        "description": "Welcome to this project-based course, Working with Subqueries in SQL. In this project, you will learn how to use SQL subqueries extensively to query tables in a database. ",
+        "language": "English",
+        "outcomes": ""
+    },
+    {
+        "url": "https://www.coursera.org/projects/developing-customer-insights-with-empathy-map-canvas",
+        "name": "Developing Customer Insights with Empathy Map Canvas",
+        "topics": [
+            "strategy",
+            "Marketing",
+            "Innovation",
+            "Entrepreneurship"
+        ],
+        "skills": [
+            "Develop insightful understanding of your customers as you identify with the challenges theyre exposed to ",
+            "Empathize with your customers as you see things from their worldview rather than yours",
+            "Ameliorate the challenges the customers go through by providing them solutions that meet their expectations  "
+        ],
+        "description": "By the end of this guided project, you will be able to use the empathy map canvas to develop empathetic insight on your customers. Empathy mapping is a visualization tool that allow you to articulate what you know about the customers.  Its considered as part of the design thinking methodology, and it empower you to create a shared understanding of customer functional, psychological and emotional needs. The canvas has 6 blocks comprising the goal (who, and what), see, say, do, hear, and think &feel (pains and gains). By analyzing each of the blocks, you would be able to develop deeper insights on the customers, and therefore come up with solutions that resonates with their expectations ",
+        "language": "English",
+        "outcomes": ""
+    },
+    {
+        "url": "https://www.coursera.org/projects/introduccion-a-dax-en-power-bi",
+        "name": "Introduccion a DAX  en Power BI",
+        "topics": [
+            "Business Intelligence",
+            "Time Intelligence",
+            "power bi",
+            "DAX"
+        ],
+        "skills": [
+            "Aprenderas a utilizar DAX en Power BI",
+            "Aprenderas a desarrollar metricas y columnas calculadas con DAX",
+            "Aprenderas las funciones mas importantes de DAX"
+        ],
+        "description": "Introduccion a DAX  en Power BI",
+        "language": "Spanish",
+        "outcomes": ""
+    },
+    {
+        "url": "https://www.coursera.org/projects/deploying-a-python-data-analytics-web-app-on-heroku",
+        "name": "Deploying a Python Data Analytics web app on Heroku ",
+        "topics": [
+            "Data Analysis",
+            "Python Programming",
+            "Streamlit",
+            "GIT",
+            "Heroku"
+        ],
+        "skills": [
+            "Analyze the General Social Survey Data with Python Data modules.",
+            "Visualize the analyzed data with Streamlit in a web app.",
+            "Deploy Streamlit web app to Heroku."
+        ],
+        "description": "Welcome to the Deploying a Python data analytics web app on Heroku guided project.",
+        "language": "English",
+        "outcomes": ""
+    },
+    {
+        "url": "https://www.coursera.org/projects/design-professional-business-card-with-qr-code-using-canva",
+        "name": "Design a Professional Business card with QR code using Canva",
+        "topics": [
+            "Qr Code",
+            "Canva",
+            "business card design",
+            "business card",
+            "virtual business card"
+        ],
+        "skills": [
+            "Design a Business card that is professional, attractive and suited for the digital age",
+            "Create a Virtual Business card with Facebook, LinkedIn, Youtube, Whatsapp & Google Maps integration"
+        ],
+        "description": "In this 1-hour long project-based course, you will learn how to design a high-quality business card that is professional, attractive and suited for the digital age. With this card, your clients can save your contact details on their mobile in an offline mode with just a click. They will also be able to connect with your Facebook Business page, LinkedIn Id, Twitter and Snapchat. They can Whatsapp you and they will also be able to watch your Youtube promotional videos.  They will be able to take a look at all the products and services that you offer on your website. They can text you, call you and email you with just a click. They can also have access to the Google map location of your business. So we will be creating a business card that will be able to do all of these and more.",
+        "language": "English",
+        "outcomes": ""
+    },
+    {
+        "url": "https://www.coursera.org/projects/use-pastel-ux-design",
+        "name": "Use Pastel in UX Design",
+        "topics": [
+            "Iteration",
+            "Web Design",
+            "Web Development",
+            "User Experience (UX)",
+            "Collaboration"
+        ],
+        "skills": [
+            "Use a website URL for reviewing a webpage in Pastel.  ",
+            "Make text edit suggestions on the web page canvas in Pastel.  ",
+            "Review a complete webpage by adding branching scenario pages to Pastel.  "
+        ],
+        "description": "When you are creating or reviewing webpages for UX Design there are tools available to help you that also allow you to collaborate. In this project, you will work with Pastel to learn how to review webpages for UX Design. You will have hands-on opportunities in this project with a practice task and a cumulative challenge activity that is optional and ungraded but will build your confidence in using Pastel.",
+        "language": "English",
+        "outcomes": ""
+    },
+    {
+        "url": "https://www.coursera.org/projects/crear-informe-financiero-microsoft-excel",
+        "name": "Crear un Informe Financiero con Microsoft Excel",
+        "topics": [
+            "Hoja de calculo",
+            "Informe financiero",
+            "Balance Financiero",
+            "Calculos"
+        ],
+        "skills": [
+            "Entender los componentes y variaciones de un informe financiero.",
+            "Completar una pagina de Transacciones y un informe de ganancias y perdidas  que resuma las transacciones mensuales.",
+            "Entender los componentes de un Balance General."
+        ],
+        "description": "Al final de este proyecto, podra completar un informe financiero con Microsoft Excel, compuesto por una pagina de transacciones, un estado de perdidas y ganancias y un balance general. Aprendera como ingresar sus transacciones comerciales e interpretar los datos presentados en el estado de perdidas y ganancias. Tambien aprendera sobre los componentes de un balance general y comprendera mejor como se puede utilizar un informe financiero para ayudar a rastrear y presentar la informacion financiera de su empresa.",
+        "language": "Spanish",
+        "outcomes": ""
+    },
+    {
+        "url": "https://www.coursera.org/projects/presentation-easelly",
+        "name": "Create Engaging Presentations with Easelly",
+        "topics": [
+            "online tools",
+            "Teaching tools",
+            "Presentation",
+            "engaging students"
+        ],
+        "skills": [
+            "Use Easelly to create engaging presentations"
+        ],
+        "description": "By the end of this project, you will have created an engaging infographic to share learning material with your students. You will be fully confident in how to use Easelly to create and modify infographics, equipping you to use Easelly with students in order to provide technology and presentation tools for student success. If you are looking for a user friendly tool that will result in professional looking products - Easelly is for you. Lets get started and create incredible content together! ",
+        "language": "English",
+        "outcomes": ""
+    },
+    {
+        "url": "https://www.coursera.org/projects/activity-recognition-python-tensorflow-keras",
+        "name": "Activity Recognition using Python, Tensorflow and Keras ",
+        "topics": [
+            "Tensorflow",
+            "Python Programming",
+            "Deep Learning",
+            "keras",
+            "cognitive data science"
+        ],
+        "skills": [
+            "Learn about data augmentation.",
+            "Learn about transfer learning  using training the pre-trained model InceptionNet V3 on the data."
+        ],
+        "description": "Note: The rhyme platform currently does not support webcams, so this is not a live project. ",
+        "language": "English",
+        "outcomes": ""
+    },
+    {
+        "url": "https://www.coursera.org/projects/build-table-layout-app-android-studio",
+        "name": "Build a Table Layout App in Android Studio",
+        "topics": [
+            "Android Studio",
+            "Java",
+            "Android",
+            "Mobile Application Development"
+        ],
+        "skills": [
+            "Android Development",
+            "Android Studio",
+            "Table Layout"
+        ],
+        "description": "In this course you will build an Android app with a Table Layout in Android Studio with the java programming language and will be given an explanation of table layout.  This app will have a piece of text asking the user to select their month of birth from a spinner (a type of drop down menu where the user selects from a set of options). There will be an image (ImageView) next to the spinner which will change to match whichever month the user selects. Beneath this the user will be asked to use a special type of  button (ToggleButton) to indicate if they prefer cats or dogs.  There will be an image (ImageView) next to the button that will change to match the animal which the user selects. Finally, the user will be asked to input a number between one and nine in an input box (EditText). Beneath the input box (EditText) will be an image (ImageView) that will change to match the number input by the user or to an image with \"Do not use\" on it if the user inputs something that is not a numerical digit between one and nine (1, 2, 3, 4, 5, 6, 7, 8, 9). When the user closes the app the program will remember the choices made by the user in their previous visit. You will upload an APK of the app to a website called Appetize.io to test the app.",
+        "language": "English",
+        "outcomes": ""
+    }
+]
