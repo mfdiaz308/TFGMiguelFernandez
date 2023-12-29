@@ -66,8 +66,7 @@ class CourseCrawler(scrapy.Spider):
                     "url":url,
                     "name":name_utf8,
                     "topics":topics_utf8,
-                    # "skills":"",
-                    # "type":"",
+                    "skills":[],
                     "description":description_utf8,
                     "language":language.split(' ')[2],
                     "outcomes":outcomes_utf8
