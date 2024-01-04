@@ -27,7 +27,7 @@ Asegurarse de tener los siguientes módulos instalados:
 `pip install pandas`  
 `pip install tqdm`  
 `pip install time`  
-`pip install os`
+`pip install os`  
 `pip install flask`  
 
 ### Scrapping
