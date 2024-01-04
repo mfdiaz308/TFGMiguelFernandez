@@ -17,28 +17,43 @@ Temas tratados en este trabajo:
 ## Antes de empezar
 Asegurarse de tener los siguientes módulos instalados:  
 
-´pip install hashlib´  
-´pip install json´  
-´pip install unicodedata´  
-´pip install requests´  
-´pip install urllib´  
-´pip install scrapy´  
-´pip install bs4´  
-´pip install pandas´  
-´pip install tqdm´  
-´pip install time´  
-´pip install os´  
-´pip install flask´  
+`pip install hashlib`  
+`pip install json`   
+`pip install unicodedata`  
+`pip install requests`  
+`pip install urllib`  
+`pip install scrapy`  
+`pip install bs4`  
+`pip install pandas`  
+`pip install tqdm`  
+`pip install time`  
+`pip install os`
+`pip install flask`  
 
 ### Scrapping
 A la hora de ejecutar los scrappers habrá que situarse en la terminal en /course_crawler/course_crawler. Una vez ahí:
 1. Para _coursera_scrapper.py_ y _edx_scrapper.py_ se escribirá en la terminal `scrapy crawl name_of_spider`, siendo `name_of_spider` el parámetro `name` asociado a la clase del scrapper que se desea ejecutar. Solo guardará aquellos cursos en Español o Inglés y que tengan descripción.
-2. Para _udemy_scrapper.py_ habrá que ejecutar el fichero mediante `py` o `python3` (en caso de duda ejecutar `which python` en la terminal para saber qué comando utilizar) seguido de la dirección relativa del fichero: `python3 spiders/udemy_scrapper.py`.  
+2. Para _udemy_scrapper.py_ habrá que ejecutar el fichero mediante `py` o `python3` (en caso de duda ejecutar `which python` en la terminal para saber qué comando utilizar) seguido de la dirección relativa del fichero: `python3 spiders/udemy_scrapper.py`.
+
+---  
+Al ejecutar los 3 scripts de scrapping se obtienen una serie de ficheros json de cada curso y 2 globales, un json y un csv, en el que se recopilan todos los datos. El fichero _all.json_ es el que se utiliza para realizar consultas desde la página web.  
 
 ### Página web
 Para inicializar el servidor se ejecutará el fichero _app.py_ igual que se ha hecho en el paso anterior para _udemy_scrapper.py_, obteniendose la siguiente pantalla en al terminal:  
 ![Debugging screen](https://github.com/mfdiaz308/TFGMiguelFernandez/assets/105811825/e9590fdd-fa73-47ca-8e17-e9028b0a379f)  
 Después se copia y pega la dirección que aparece en un navegador y ya se pueden realizar búsquedas.  
+
+---  
+Al completar una búsqueda se obtiene la siguiente pantalla:  
+![search_results](https://github.com/mfdiaz308/TFGMiguelFernandez/assets/105811825/2e5812ce-0fff-4a34-952c-e541145d12c2)  
+De izquierda a derecha se tiene:  
+
+- Enlace al curso
+- Nombre
+- Descripción acortada con botón _Ver más_ que muestra la descripción completa en un cuadro de texto.
+- Diagrama con la taxonomía de Bloom correspondiente y enlace con explicación detallada ([Taxonomía Bloom](https://www3.gobiernodecanarias.org/medusa/edublog/cprofestenerifesur/2015/12/03/la-taxonomia-de-bloom-una-herramienta-imprescindible-para-ensenar-y-aprender/)).  
+
+
 
 ## Estructura del código
 En primer lugar, los scrappers están contenidos en la carpeta _spiders_, como es costumbre en los proyectos de _Scrapy_, y tienen dentro otra carpeta _course_crawler_data_ en la que se guardan los ficheros json individuales de cada curso. Están separados por página web y nombrados con un hash de su url para evitar duplicados.  
