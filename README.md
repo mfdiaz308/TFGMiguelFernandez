@@ -45,7 +45,8 @@ Después se copia y pega la dirección que aparece en un navegador y ya se puede
 
 ---  
 Al completar una búsqueda se obtiene la siguiente pantalla:  
-![search_results](https://github.com/mfdiaz308/TFGMiguelFernandez/assets/105811825/2e5812ce-0fff-4a34-952c-e541145d12c2)  
+![search_results](https://github.com/mfdiaz308/TFGMiguelFernandez/assets/105811825/774215dd-e492-4cfb-9c01-6c90ad6e53b9)  
+
 De izquierda a derecha se tiene:  
 
 - Enlace al curso
