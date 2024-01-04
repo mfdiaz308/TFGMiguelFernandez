@@ -14,7 +14,7 @@ Temas tratados en este trabajo:
 - Diseño de páginas web con _html_, _css_ y _javascript_.
 
 ## Uso
-## Antes de empezar
+### Antes de empezar
 Asegurarse de tener los siguientes módulos instalados:  
 
 `pip install hashlib`  
