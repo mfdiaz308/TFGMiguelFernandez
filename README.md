@@ -1,5 +1,52 @@
-# TFGWebPage
-Página web del TFG "Automatización de ingesta de datos y publicación en web de datos de educación"  
+# Ingesta de datos de plataformas de enseñanza y publicación en página web  
+
+## Proceso de scrapping mediante _Scrapy_ y creacion de página web mediante _Flask_  
+
+Este proyecto pertenece al Trabajo de Fin de Grado "Automatización de ingesta de datos y publicación en web de datos de educación". El código ha sido clonado en una máquina virtual linux asociada al proyecto AI4Labour en el que, mediante crontab, se ejecutan los scrappers (de Coursera, edX y Udemy) y el recopilador (_combine_json.py_) una vez por semana para tener la información lo más actualizada posible.  
+
+Temas tratados en este trabajo:
+- Scrapping de páginas web con _BeautifulSoup_ y _Scrapy_.
+- Creación de hash con la librería _hashlib_.
+- Tratamiento de caracteres especiales con _unicodedata_.
+- Recopilación de datos mediante _json_ y _pandas_.
+- Creación de páginas web con _Flask_.
+- Análisis de texto para elaborar taxonomía de Bloom.
+- Diseño de páginas web con _html_, _css_ y _javascript_.
 
 ## Uso
-Ejecutar app.py y abrir la url que aparece en la consola  
+## Antes de empezar
+Asegurarse de tener los siguientes módulos instalados:  
+
+´pip install hashlib´  
+´pip install json´  
+´pip install unicodedata´  
+´pip install requests´  
+´pip install urllib´  
+´pip install scrapy´  
+´pip install bs4´  
+´pip install pandas´  
+´pip install tqdm´  
+´pip install time´  
+´pip install os´  
+´pip install flask´  
+
+### Scrapping
+A la hora de ejecutar los scrappers habrá que situarse en la terminal en /course_crawler/course_crawler. Una vez ahí:
+1. Para _coursera_scrapper.py_ y _edx_scrapper.py_ se escribirá en la terminal `scrapy crawl name_of_spider`, siendo `name_of_spider` el parámetro `name` asociado a la clase del scrapper que se desea ejecutar. Solo guardará aquellos cursos en Español o Inglés y que tengan descripción.
+2. Para _udemy_scrapper.py_ habrá que ejecutar el fichero mediante `py` o `python3` (en caso de duda ejecutar `which python` en la terminal para saber qué comando utilizar) seguido de la dirección relativa del fichero: `python3 spiders/udemy_scrapper.py`.  
+
+### Página web
+Para inicializar el servidor se ejecutará el fichero _app.py_ igual que se ha hecho en el paso anterior para _udemy_scrapper.py_, obteniendose la siguiente pantalla en al terminal:  
+![Debugging screen](https://github.com/mfdiaz308/TFGMiguelFernandez/assets/105811825/e9590fdd-fa73-47ca-8e17-e9028b0a379f)  
+Después se copia y pega la dirección que aparece en un navegador y ya se pueden realizar búsquedas.  
+
+## Estructura del código
+En primer lugar, los scrappers están contenidos en la carpeta _spiders_, como es costumbre en los proyectos de _Scrapy_, y tienen dentro otra carpeta _course_crawler_data_ en la que se guardan los ficheros json individuales de cada curso. Están separados por página web y nombrados con un hash de su url para evitar duplicados.  
+También dentro de _spiders_ está el fichero _combine_json.py_, que al ejecutarse combina todos los ficheros individuales de las 3 carpetas en un fichero _all.json_ y otro __all.csv_.  
+Fuera de _spiders_ están el fichero _app.py_, encargado de inicializar la página web, y la carpeta _templates_. Esta contiene los ficheros para cada situación que puede surgir a la hora de realizar búsquedas: página de inicio (_index.html_), página de resultados (_results.html_) y no se han encontrado resultados (_no_results.html_).  
+
+## Posibles mejoras
+1. Crear un servidor apache para la página web.
+2. Ofrecer la posibilidad de descargar el archivo json correspondiente al curso desde la página web.
+3. Implementar _Scrapy_ para Udemy (tras varios intentos solo se consigue error 403).
+4. Usar los demás contenidos scrappeados de los cursos (topics, skills, language y outcomes).  
