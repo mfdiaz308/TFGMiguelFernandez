@@ -63,7 +63,7 @@ def index():
 
 @app.route('/search', methods=['POST'])
 def search():
-    çsearch_query = request.form['search']
+    search_query = request.form['search']
     search_query += ' '
     print("Search query:", search_query)
     return redirect(url_for('search_results', search_query=escape(search_query)))
