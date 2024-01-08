@@ -62,7 +62,7 @@ def get_course(query):
     print(f'Courses found: {len(res)}')
     return res
 
-@app.route('/miguel/')
+@app.route('/')
 def index():
     return render_template('index.html')
 
