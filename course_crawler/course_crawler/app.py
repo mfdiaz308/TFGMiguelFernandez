@@ -66,10 +66,7 @@ def search():
     search_query = request.form['search']
     search_query += ' '
     print("Search query:", search_query)
-    return redirect(url_for('search_results', search_query=escape(search_query)))
 
-@app.route('/search_<search_query>', methods=['GET', 'POST'])
-def search_results(search_query):
     courses = get_course(search_query)
     if courses == []:
         return render_template('no_results.html')
@@ -80,7 +77,6 @@ def search_results(search_query):
         bloom_arr.append(bloom_count)
 
     return render_template('results.html', courses=courses, bloom_nums=bloom_arr, limit=min(max_results, len(courses)))
-
 
 if __name__ == '__main__':
     app.run(debug=True)
