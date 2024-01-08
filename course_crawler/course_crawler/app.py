@@ -1,7 +1,7 @@
 import json
 from flask import Flask, render_template, request, redirect, url_for, escape
 
-app = Flask(__name__)
+app = Flask(__name__, instance_relative_config=True)
 
 max_results = 20
 
