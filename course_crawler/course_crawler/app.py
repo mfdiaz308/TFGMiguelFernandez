@@ -1,13 +1,7 @@
 import json
 from flask import Flask, render_template, request, redirect, url_for, escape
-from werkzeug.middleware.proxy_fix import ProxyFix
 
 app = Flask(__name__)
-
-
-app.wsgi_app = ProxyFix(
-    app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1
-)
 
 max_results = 20
 
@@ -67,17 +61,14 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/miguel/search', methods=['GET', 'POST'])
+@app.route('/search', methods=['POST'])
 def search():
-    if request.method == 'POST':
-        search_query = request.form['search']
-        search_query += ' '
-        print("Search query:", search_query)
-        return redirect(url_for('search_results', search_query=escape(search_query)))
-    
-    return render_template('index.html', search_input='')
+    çsearch_query = request.form['search']
+    search_query += ' '
+    print("Search query:", search_query)
+    return redirect(url_for('search_results', search_query=escape(search_query)))
 
-@app.route('/miguel/search_<search_query>', methods=['GET', 'POST'])
+@app.route('/search_<search_query>', methods=['GET', 'POST'])
 def search_results(search_query):
     courses = get_course(search_query)
     if courses == []:
@@ -90,8 +81,6 @@ def search_results(search_query):
 
     return render_template('results.html', courses=courses, bloom_nums=bloom_arr, limit=min(max_results, len(courses)))
 
-
-# TODO: quitar comentarios de descripcion de coursera
 
 if __name__ == '__main__':
     app.run(debug=True)
