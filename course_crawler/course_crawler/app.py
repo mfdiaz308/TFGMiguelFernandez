@@ -56,12 +56,12 @@ def get_course(query):
     print(f'Courses found: {len(res)}')
     return res
 
-@app.route('/')
+@app.route('/miguel/', methods=['GET','POST'])
 def index():
     return render_template('index.html')
 
 
-@app.route('/search', methods=['POST'])
+@app.route('/miguel/search', methods=['GET','POST'])
 def search():
     search_query = request.form['search']
     search_query += ' '
@@ -77,6 +77,7 @@ def search():
         bloom_arr.append(bloom_count)
 
     return render_template('results.html', courses=courses, bloom_nums=bloom_arr, limit=min(max_results, len(courses)))
+
 
 if __name__ == '__main__':
     app.run(debug=True)
