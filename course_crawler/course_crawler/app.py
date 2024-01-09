@@ -56,12 +56,12 @@ def get_course(query):
     print(f'Courses found: {len(res)}')
     return res
 
-@app.route('/miguel/', methods=['GET','POST'])
+@app.route('/', methods=['GET','POST'])
 def index():
     return render_template('index.html')
 
 
-@app.route('/miguel/search', methods=['GET','POST'])
+@app.route('/search', methods=['GET','POST'])
 def search():
     search_query = request.form['search']
     search_query += ' '
