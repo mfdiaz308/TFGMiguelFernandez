@@ -2,7 +2,7 @@
 
 ## Proceso de scrapping mediante _Scrapy_ y creacion de página web mediante _Flask_  
 
-Este proyecto pertenece al Trabajo de Fin de Grado "Automatización de ingesta de datos y publicación en web de datos de educación". El código ha sido clonado en una máquina virtual linux asociada al proyecto AI4Labour en el que, mediante crontab, se ejecutan los scrappers (de Coursera, edX y Udemy) y el recopilador (_combine_json.py_) una vez por semana para tener la información lo más actualizada posible.  
+Este proyecto pertenece al Trabajo de Fin de Grado "Automatización de ingesta de datos y publicación en web de datos de educación". El código ha sido clonado en una máquina virtual linux asociada al proyecto AI4Labour en el que, mediante crontab, se ejecutan los scrappers (de Coursera, edX y Udemy) y el recopilador (_combine_json.py_) una vez por semana para tener la información lo más actualizada posible. La página web está disponible en [https://ai4labour.linkeddata.es/miguel/](https://ai4labour.linkeddata.es/miguel/).  
 
 Temas tratados en este trabajo:
 - Scrapping de páginas web con _BeautifulSoup_ y _Scrapy_.
@@ -58,7 +58,7 @@ De izquierda a derecha se tiene:
 
 ## Estructura del código
 En primer lugar, los scrappers están contenidos en la carpeta _spiders_, como es costumbre en los proyectos de _Scrapy_, y tienen dentro otra carpeta _course_crawler_data_ en la que se guardan los ficheros json individuales de cada curso. Están separados por página web y nombrados con un hash de su url para evitar duplicados.  
-También dentro de _spiders_ está el fichero _combine_json.py_, que al ejecutarse combina todos los ficheros individuales de las 3 carpetas en un fichero _all.json_ y otro __all.csv_.  
+También dentro de _spiders_ está el fichero _combine_json.py_, que al ejecutarse combina todos los ficheros individuales de las 3 carpetas en un fichero _all.json_ y otro _all.csv_.  
 Fuera de _spiders_ están el fichero _app.py_, encargado de inicializar la página web, y la carpeta _templates_. Esta contiene los ficheros para cada situación que puede surgir a la hora de realizar búsquedas: página de inicio (_index.html_), página de resultados (_results.html_) y no se han encontrado resultados (_no_results.html_).  
 
 ## Posibles mejoras
