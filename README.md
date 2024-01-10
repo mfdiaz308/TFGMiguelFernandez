@@ -52,7 +52,6 @@ También dentro de _spiders_ está el fichero _combine_json.py_, que al ejecutar
 Fuera de _spiders_ están el fichero _app.py_, encargado de inicializar la página web, y la carpeta _templates_. Esta contiene los ficheros para cada situación que puede surgir a la hora de realizar búsquedas: página de inicio (_index.html_), página de resultados (_results.html_) y no se han encontrado resultados (_no_results.html_).  
 
 ## Posibles mejoras
-1. Crear un servidor apache para la página web.
-2. Ofrecer la posibilidad de descargar el archivo json correspondiente al curso desde la página web.
-3. Implementar _Scrapy_ para Udemy (tras varios intentos solo se consigue error 403).
-4. Usar los demás contenidos scrappeados de los cursos (topics, skills, language y outcomes).  
+1. Ofrecer la posibilidad de descargar el archivo json correspondiente al curso desde la página web.
+2. Implementar _Scrapy_ para Udemy (tras varios intentos solo se consigue error 403).
+3. Usar los demás contenidos scrappeados de los cursos (topics, skills, language y outcomes).  
