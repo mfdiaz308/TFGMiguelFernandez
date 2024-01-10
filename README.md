@@ -15,20 +15,9 @@ Temas tratados en este trabajo:
 
 ## Uso
 ### Antes de empezar
-Asegurarse de tener los siguientes módulos instalados:  
+Instalar los módulos especificados en el archivo _requirements.txt_.  
 
-`pip install hashlib`  
-`pip install json`   
-`pip install unicodedata`  
-`pip install requests`  
-`pip install urllib`  
-`pip install scrapy`  
-`pip install bs4`  
-`pip install pandas`  
-`pip install tqdm`  
-`pip install time`  
-`pip install os`  
-`pip install flask`  
+También cabe destacar que en caso de no estar operativo el servidor apache2 de la máquina virtual asociada a [AI4Labour](https://ai4labour.com/) la página web no funcionará.  
 
 ### Scrapping
 A la hora de ejecutar los scrappers habrá que situarse en la terminal en /course_crawler/course_crawler. Una vez ahí:
@@ -39,9 +28,12 @@ A la hora de ejecutar los scrappers habrá que situarse en la terminal en /cours
 Al ejecutar los 3 scripts de scrapping se obtienen una serie de ficheros json de cada curso y 2 globales, un json y un csv, en el que se recopilan todos los datos. El fichero _all.json_ es el que se utiliza para realizar consultas desde la página web.  
 
 ### Página web
-Para inicializar el servidor se ejecutará el fichero _app.py_ igual que se ha hecho en el paso anterior para _udemy_scrapper.py_, obteniendose la siguiente pantalla en al terminal:  
-![Debugging screen](https://github.com/mfdiaz308/TFGMiguelFernandez/assets/105811825/e9590fdd-fa73-47ca-8e17-e9028b0a379f)  
-Después se copia y pega la dirección que aparece en un navegador y ya se pueden realizar búsquedas.  
+Para inicializar la página web hay 2 opciones:  
+- Introducir la URL asignada mediante la creación de un servidor apache2 en la máquina virtual: [https://ai4labour.linkeddata.es/miguel/search](https://ai4labour.linkeddata.es/miguel/).
+- Introducir la URL que aparece en la terminal y, una vez realizada una búsqueda, ser redirigido a la URL del servidor apache2.
+
+En cualquier caso, este es el resultado de inicializar la página web:  
+![Debugging screen](https://github.com/mfdiaz308/TFGMiguelFernandez/assets/105811825/e9590fdd-fa73-47ca-8e17-e9028b0a379f)    
 
 ---  
 Al completar una búsqueda se obtiene la siguiente pantalla:  
