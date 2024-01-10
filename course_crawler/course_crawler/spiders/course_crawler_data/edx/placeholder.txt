@@ -1,0 +1,1 @@
+Existe para que no se borren las carpetas "coursera", "edx" y "udemy" al publicar el código en git.
