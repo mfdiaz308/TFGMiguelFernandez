@@ -30,9 +30,7 @@ Al ejecutar los 3 scripts de scrapping se obtienen una serie de ficheros json de
 ### Página web
 Para inicializar la página web hay 2 opciones:  
 - Introducir la URL asignada mediante la creación del servidor en la máquina virtual: [https://ai4labour.linkeddata.es/miguel/](https://ai4labour.linkeddata.es/miguel/).
-- Introducir la URL que aparece en la terminal y, una vez realizada una búsqueda, ser redirigido a la URL del servidor apache2.
-
-En cualquier caso, este es el resultado de inicializar la página web:  
+- Ejecutar _app.py_ e introducir la URL que aparece en la terminal para, una vez realizada una búsqueda, ser redirigido a la URL del servidor apache2. En ese caso, este es la URL que aparece en la terminal:  
 ![Debugging screen](https://github.com/mfdiaz308/TFGMiguelFernandez/assets/105811825/e9590fdd-fa73-47ca-8e17-e9028b0a379f)    
 
 ---  
