@@ -41,19 +41,23 @@ def count_bloom_verbs(course_description):
             return [0,0,0,0,0,0]
     return res
 
-def get_course(query):
+def get_course(query,max):
     res = []
     with open('spiders/course_crawler_data/all.json','r') as f:
         data = json.load(f)
 
+    i=1
     try:
         for course in data:
+            if i==max:
+                break
             if query.lower() in course['name'].lower() or query.lower() in course['skills'] or query.lower() in course['description'] or query.lower() in course['outcomes']:
-                res.append(course)            
+                res.append(course)       
+            i+=1
     except:
         print('----------------------------')
     
-    print(f'Courses found: {len(res)}')
+    print(f'Courses shown: {len(res)}')
     return res
 
 @app.route('/', methods=['GET','POST'])
@@ -64,10 +68,9 @@ def index():
 @app.route('/search', methods=['GET','POST'])
 def search():
     search_query = request.form['search']
-    search_query += ' '
     print("Search query:", search_query)
 
-    courses = get_course(search_query)
+    courses = get_course(search_query,max_results)
     if courses == []:
         return render_template('no_results.html')
 
