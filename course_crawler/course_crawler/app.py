@@ -53,7 +53,7 @@ def get_course(query,max):
                 break
             if query.lower() in course['name'].lower() or query.lower() in course['skills'] or query.lower() in course['description'] or query.lower() in course['outcomes']:
                 res.append(course)       
-            i+=1
+                i+=1
     except:
         print('----------------------------')
     
