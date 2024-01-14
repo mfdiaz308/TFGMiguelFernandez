@@ -50,8 +50,11 @@ class EdxScrapper(CrawlSpider):
                 # Se decide no añadir 'type', ya que no se guardan los archivos en carpetas diferentes
 
                 description_utf8 = ''
-                for desc in description:
-                    description_utf8 += f'{convert_to_utf8(desc)} '
+                if isinstance(description,str):
+                    description_utf8 = convert_to_utf8(description)
+                else:
+                   for desc in description:
+                       description_utf8 += f'{convert_to_utf8(desc)} '
 
                 outcomes = response.css('li.bullet-point.mb-2 ::text').getall()
 
